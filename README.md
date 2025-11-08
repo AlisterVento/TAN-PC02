@@ -85,7 +85,6 @@ El dataset contiene información de transacciones diarias en una tienda de café
 | **Categórica** | `transaction_id` | Identificador único de cada transacción. |
 | **Fecha** | `transaction_date` | Fecha de la transacción. |
 | **Hora** | `transaction_time` | Hora de la transacción. |
-| **Numérica** | `transaction_qty` | Cantidad de productos vendidos. |
 | **Numérica** | `unit_price` | Precio unitario del producto. |
 | **Categórica** | `product_category` | Categoría del producto (por ejemplo, *Bebidas*, *Comidas*, etc.). |
 | **Categórica** | `product_type` | Tipo específico del producto (por ejemplo, *Latte*, *Espresso*, *Sandwich*, etc.). |
