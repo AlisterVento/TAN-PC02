@@ -1,8 +1,11 @@
 pandas
 numpy
 scipy
-pathlib
+matplotlib
+seaborn
+ipykernel
+loguru
+python-dotenv
+kaggle
 kagglehub
-zipfile
-logging
-sns
+openpyxl
