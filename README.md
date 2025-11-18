@@ -72,27 +72,97 @@ Este repositorio consolida un flujo reproducible de ingestión, limpieza y anál
 ## 5.Resultados generados
 Las ejecuciones completas de los notebooks depositan los artefactos en `src/results/`. Cada imagen refleja un aspecto del análisis:
 ### 5.1 Distribución del valor total (USD)
-[Histograma del valor total](src/results/hist_valor_total.jpg)
+![Histograma del valor total](src/results/hist_valor_total.jpg)
 - La mayoría de las transacciones se concentran entre 200 y 1500 USD, típico de una distribución sesgada a la derecha.
 ### 5.2 Número de transacciones por categoría
-[Barras por categoría](src/results/barras_categoria.jpg)
+![Barras por categoría](src/results/barras_categoria.jpg)
 - Mantequilla y Leche muestran ligeramente más transacciones,sin embargo todas las categorías tienen volúmenes de transacciones muy similares (entre ~1600–1700), lo que sugiere una demanda balanceada en el portafolio.
 ### 5.3 Variabilidad del valor total por categoría
-[Boxplot de categorías](src/results/boxplot_categoria.jpg)
+![Boxplot de categorías](src/results/boxplot_categoria.jpg)
 - Los quesos y mantequilla presentan los valores totales más altos y mayor dispersión, lo que refleja tickets más elevados y compras más variables .  
 - La leche y yogurt muestran valores más bajos y menos dispersos, característico de productos más básicos y de compra homogénea.
 ### 5.4 Relación entre precio unitario y cantidad comprada
-[Gráfico de dispersión precio vs cantidad](src/results/scatter_precio_vs_cantidad.jpg)
+![Gráfico de dispersión precio vs cantidad](src/results/scatter_precio_vs_cantidad.jpg)
 - Los precios unitarios están muy concentrados en rangos específicos por categoría (bandas verticales), indicando precios estables y poco variables dentro de cada producto.
 ### 5.5 Distribución por forma de pago
-[Conteo por forma de pago](src/results/count_forma_pago.jpg)
+![Conteo por forma de pago](src/results/count_forma_pago.jpg)
 - No existe una forma de pago dominante: todas rondan las 1900–2000 transacciones. Esto indica un mix de pagos equilibrado.
 
 ### 5.6 Correlación entre variables numéricas
-[Mapa de calor de correlación](src/results/heatmap_correlacion.jpg)
+![Mapa de calor de correlación](src/results/heatmap_correlacion.jpg)
 - La cantidad comprada tiene la correlación más fuerte con el valor total (0.71), lo que confirma que el volumen es el principal motor del gasto.
 ### 5.7 Tabla de estadísticas descriptivas por categoría
-[Tabla HTML de estadísticas](src/results/tabla_estadisticas_categorias.html)
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>registros</th>
+      <th>media</th>
+      <th>desviacion</th>
+      <th>minimo</th>
+      <th>maximo</th>
+    </tr>
+    <tr>
+      <th>categoria</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Mantequilla</th>
+      <td>1712</td>
+      <td>2327.75</td>
+      <td>1401.98</td>
+      <td>44.00</td>
+      <td>5738.50</td>
+    </tr>
+    <tr>
+      <th>Leche</th>
+      <td>1691</td>
+      <td>933.78</td>
+      <td>838.76</td>
+      <td>15.00</td>
+      <td>5417.50</td>
+    </tr>
+    <tr>
+      <th>Otros</th>
+      <td>1677</td>
+      <td>1263.97</td>
+      <td>864.83</td>
+      <td>16.50</td>
+      <td>4250.00</td>
+    </tr>
+    <tr>
+      <th>Quesos</th>
+      <td>1659</td>
+      <td>2415.08</td>
+      <td>1511.29</td>
+      <td>45.00</td>
+      <td>6237.50</td>
+    </tr>
+    <tr>
+      <th>Yogur</th>
+      <td>1640</td>
+      <td>910.85</td>
+      <td>694.03</td>
+      <td>18.00</td>
+      <td>3409.00</td>
+    </tr>
+    <tr>
+      <th>Cremas</th>
+      <td>1621</td>
+      <td>1863.55</td>
+      <td>1356.25</td>
+      <td>25.00</td>
+      <td>5990.00</td>
+    </tr>
+  </tbody>
+</table>
 - tabla  con conteo, media, desviación, mínimo y máximo del valor total por categoría para informes detallados.
 ### 5.8 Síntesis de hallazgos del EDA
 
@@ -125,7 +195,7 @@ Comparar si el valor total promedio (USD) difiere entre las seis categorías de 
 ## 7. Resultados del ANOVA – SPSS
 
 ### 7.1.Descriptivos por categoría
-[Resultados SPSS descriptivos](src/resultados_SPSS/resultados_descriptivos.jpg)
+![Resultados SPSS descriptivos](src/resultados_SPSS/resultados_descriptivos.jpg)
 - Quesos y Mantequilla presentan los promedios más altos.
 - Leche y Yogur presentan los valores más bajos.
 - La media general del dataset es aproximadamente 1620 USD.
