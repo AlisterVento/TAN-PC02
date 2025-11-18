@@ -149,10 +149,7 @@ def convertir_tipos(data: pd.DataFrame) -> pd.DataFrame:
             )
         else:
             df["valor_total_usd"] = pd.to_numeric(df.iloc[:, 0], errors="coerce")
-            logger.warning(
-                "No se detectó columna de valor total; se aplica la primera numérica disponible."
-            )
-
+            
     df = df.assign(
         tipo_producto=df.get("producto", "lacteo"),
 
